@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ComponentRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { NotificationComponent } from './notification/notification.component';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dyamic-component';
+  @ViewChild('notificationComponent', { read: ViewContainerRef })
+  notificationComponent!: ViewContainerRef;
+  ref!: ComponentRef<NotificationComponent>;
+
+  showNotication() {
+    this.ref = this.notificationComponent.createComponent(NotificationComponent);
+  }
+
+  hideNotication() {
+    this.notificationComponent.clear();
+  }
+
 }

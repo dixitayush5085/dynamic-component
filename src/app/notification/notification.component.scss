@@ -1,0 +1,15 @@
+.notification {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    height: 200px;
+    width: 500px;
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    border-radius: 30px;
+    box-shadow: inset -3px 03px 3px grey;
+}
