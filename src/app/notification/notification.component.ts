@@ -9,6 +9,8 @@ export class NotificationComponent implements OnInit {
 
   constructor() { }
 
+  notificationText!: string;
+
   ngOnInit(): void {
   }
 

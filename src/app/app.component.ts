@@ -15,6 +15,7 @@ export class AppComponent {
 
   showNotication() {
     this.ref = this.notificationComponent.createComponent(NotificationComponent);
+    this.ref.instance.notificationText = "I am Notification";
   }
 
   hideNotication() {
